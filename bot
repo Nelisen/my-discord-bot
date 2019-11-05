@@ -3,8 +3,7 @@ import random
 import os
 
 
-TOKEN = 'NjI1NzkwMDEyOTgxNTEwMTQ0.XYkwpg.tj1oS_4BEvwJ5t_byAu3KU7zKDc'
-
+TOKEN = ''
 client = discord.Client()
 
 a = 0
