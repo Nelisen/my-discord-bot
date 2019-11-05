@@ -1,0 +1,25 @@
+import discord
+import random
+import os
+
+
+TOKEN = 'NjI1NzkwMDEyOTgxNTEwMTQ0.XYkwpg.tj1oS_4BEvwJ5t_byAu3KU7zKDc'
+
+client = discord.Client()
+
+a = 0
+b = 100
+
+@client.event
+async def on_message(message):
+    if message.content.startswith('!roll'):
+        print('[command]: roll ')
+        roll = int(random.randint(a, b))
+        channel = message.channel
+        await channel.send("Вы получаете случайное число: " + str(roll) +" (" + str(a) + " - " + str(b) + ")")
+
+async def on_message(message):
+    if message.content.startswith('!a_change'):        
+        def test(a):  # создаем асинхронную фунцию бота
+            return a  # отправляем обратно аргумент
+client.run(TOKEN)
